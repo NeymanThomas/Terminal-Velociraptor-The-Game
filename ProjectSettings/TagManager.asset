@@ -55,3 +55,6 @@ TagManager:
   - name: Effect
     uniqueID: 2404364263
     locked: 0
+  - name: Water
+    uniqueID: 2240740717
+    locked: 0

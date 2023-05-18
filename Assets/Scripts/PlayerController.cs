@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private bool isJumping;
     private bool isDucking;
     private bool isLanding;
+    private bool isScratching;
     private bool isDead;
     private bool isFacingRight;
     private float jumpTimeCounter;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         Player_Fall,
         Player_Landing,
         Player_Duck,
+        Player_Scratch,
         Player_Death_1
     }
 
@@ -56,6 +58,12 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+
+        if (Input.GetButtonDown("Fire1")) 
+        {
+            isScratching = true;
+        }
+
         if (vertical < 0) 
         {
             isDucking = true;
@@ -90,7 +98,7 @@ public class PlayerController : MonoBehaviour
         // reset the camera if the player was previously ducking
         if (!isDucking && CameraController.Instance.IsPlayerDucking) 
         {
-            CameraController.Instance.DuckCamera(isDucking);
+            CameraController.Instance.RaiseCamera();
         }
 
         // determine what animation to play when on the ground
@@ -102,6 +110,10 @@ public class PlayerController : MonoBehaviour
                 EffectAnimator.Instance.setPosition(transform.position);
                 EffectAnimator.Instance.Land(isFacingRight);
             }
+            else if (isScratching) 
+            {
+                ChangeAnimationState(AnimationState.Player_Scratch);
+            }
             else if (horizontal > 0f || horizontal < 0f) 
             {
                 ChangeAnimationState(AnimationState.Player_Run);
@@ -110,7 +122,7 @@ public class PlayerController : MonoBehaviour
             {
                 ChangeAnimationState(AnimationState.Player_Duck);
                 isDucking = true;
-                CameraController.Instance.DuckCamera(isDucking);
+                CameraController.Instance.DuckCamera();
             }
             else 
             {
@@ -134,7 +146,7 @@ public class PlayerController : MonoBehaviour
             jumpTimeCounter = jumpTime;
         }
         // logic to allow the player to jump higher the longer jump is held
-        if (Input.GetKey(KeyCode.Space) && isJumping) 
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.W)) && isJumping) 
         {
             if (jumpTimeCounter > 0) 
             {
@@ -147,12 +159,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (rb.velocity.y < -0.5f) 
+        if (!IsGrounded() && rb.velocity.y < -0.5f) 
         {
             ChangeAnimationState(AnimationState.Player_Fall);
             isLanding = true;
         }
-
     }
 
 
@@ -179,6 +190,12 @@ public class PlayerController : MonoBehaviour
     private void LandingComplete() 
     {
         isLanding = false;
+    }
+
+
+    private void ScratchComplete() 
+    {
+        isScratching = false;
     }
 
 

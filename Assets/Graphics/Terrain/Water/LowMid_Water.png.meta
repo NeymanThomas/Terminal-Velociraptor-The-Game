@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: fdff67718cca87347b4ff2aa4218a12b
+guid: af9a4644d6dae0545aeccb59addb265a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4058864348054370222
-    second: BasicTerrainTile_0
+      213: -9093654508525262370
+    second: LowMid_Water_0
   - first:
-      213: 563740409866666283
-    second: BasicTerrainTile_1
+      213: 4657933614972475874
+    second: LowMid_Water_1
   - first:
-      213: 5949878213764197241
-    second: BasicTerrainTile_2
+      213: 1121231702151210411
+    second: LowMid_Water_2
   - first:
-      213: 2301699693803454695
-    second: BasicTerrainTile_3
+      213: 1118179659885512316
+    second: LowMid_Water_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,49 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BasicTerrainTile_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 258c8b651640ca7c0800000000000000
-      internalID: -4058864348054370222
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BasicTerrainTile_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b21c2ab7aeec2d700800000000000000
-      internalID: 563740409866666283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BasicTerrainTile_2
+      name: LowMid_Water_0
       rect:
         serializedVersion: 2
         x: 0
@@ -171,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97b204c26b6329250800000000000000
-      internalID: 5949878213764197241
+      spriteID: ed9e83d9769dcc180800000000000000
+      internalID: -9093654508525262370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BasicTerrainTile_3
+      name: LowMid_Water_1
       rect:
         serializedVersion: 2
         x: 16
@@ -192,8 +150,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e0c7c43da741ff10800000000000000
-      internalID: 2301699693803454695
+      spriteID: 2e919cba1fd44a040800000000000000
+      internalID: 4657933614972475874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowMid_Water_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba521a5ea4a6f8f00800000000000000
+      internalID: 1121231702151210411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LowMid_Water_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c760b8ee972948f00800000000000000
+      internalID: 1118179659885512316
       vertices: []
       indices: 
       edges: []
