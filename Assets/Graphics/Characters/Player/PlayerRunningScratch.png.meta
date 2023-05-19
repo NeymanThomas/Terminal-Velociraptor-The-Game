@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 73d8bb4f9dcc5c94c8710a5c26f0f8f7
+guid: 3faf2c9dbf857494286e28ef725fad91
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4412130550222552621
-    second: PlayerStandingScratch_0
+      213: -7384407957692915234
+    second: PlayerRunningScratch_0
   - first:
-      213: 9161695180169947192
-    second: PlayerStandingScratch_1
+      213: -5941386936400243770
+    second: PlayerRunningScratch_1
   - first:
-      213: -4848029670749011988
-    second: PlayerStandingScratch_2
+      213: -6973514475372809526
+    second: PlayerRunningScratch_2
   - first:
-      213: 3601433860311271003
-    second: PlayerStandingScratch_3
+      213: 8571729643710285365
+    second: PlayerRunningScratch_3
   - first:
-      213: -3835449471420611899
-    second: PlayerStandingScratch_4
+      213: -4429022887027402448
+    second: PlayerRunningScratch_4
   - first:
-      213: 3693239688354619231
-    second: PlayerStandingScratch_5
+      213: 6523640859748377752
+    second: PlayerRunningScratch_5
   - first:
-      213: 1497462703572521686
-    second: PlayerStandingScratch_6
+      213: -1252102800923614295
+    second: PlayerRunningScratch_6
   - first:
-      213: -7567371110944222716
-    second: PlayerStandingScratch_7
+      213: 6693021891327277571
+    second: PlayerRunningScratch_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,7 +127,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerStandingScratch_0
+      name: PlayerRunningScratch_0
       rect:
         serializedVersion: 2
         x: 0
@@ -141,14 +141,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2ef9a4eb590b3d30800000000000000
-      internalID: 4412130550222552621
+      spriteID: ed165253610558990800000000000000
+      internalID: -7384407957692915234
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerStandingScratch_1
+      name: PlayerRunningScratch_1
       rect:
         serializedVersion: 2
         x: 48
@@ -162,14 +162,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8382072c931e42f70800000000000000
-      internalID: 9161695180169947192
+      spriteID: 6c397b66f04fb8da0800000000000000
+      internalID: -5941386936400243770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerStandingScratch_2
+      name: PlayerRunningScratch_2
       rect:
         serializedVersion: 2
         x: 96
@@ -183,14 +183,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cef737e43b658bcb0800000000000000
-      internalID: -4848029670749011988
+      spriteID: ac2fb5b2889193f90800000000000000
+      internalID: -6973514475372809526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerStandingScratch_3
+      name: PlayerRunningScratch_3
       rect:
         serializedVersion: 2
         x: 144
@@ -204,14 +204,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b56cae5c30ddaf130800000000000000
-      internalID: 3601433860311271003
+      spriteID: 536890c22b6e4f670800000000000000
+      internalID: 8571729643710285365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerStandingScratch_4
+      name: PlayerRunningScratch_4
       rect:
         serializedVersion: 2
         x: 0
@@ -225,14 +225,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c2c30ed60fb5cac0800000000000000
-      internalID: -3835449471420611899
+      spriteID: 03918a47623f882c0800000000000000
+      internalID: -4429022887027402448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerStandingScratch_5
+      name: PlayerRunningScratch_5
       rect:
         serializedVersion: 2
         x: 48
@@ -246,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5f50cecde5014330800000000000000
-      internalID: 3693239688354619231
+      spriteID: 894a6875cc0a88a50800000000000000
+      internalID: 6523640859748377752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerStandingScratch_6
+      name: PlayerRunningScratch_6
       rect:
         serializedVersion: 2
         x: 96
@@ -267,14 +267,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d216de156e08c410800000000000000
-      internalID: 1497462703572521686
+      spriteID: 9a32da0f223af9ee0800000000000000
+      internalID: -1252102800923614295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerStandingScratch_7
+      name: PlayerRunningScratch_7
       rect:
         serializedVersion: 2
         x: 144
@@ -288,8 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 402dd98711c4bf690800000000000000
-      internalID: -7567371110944222716
+      spriteID: 30ab972f2f362ec50800000000000000
+      internalID: 6693021891327277571
       vertices: []
       indices: 
       edges: []
