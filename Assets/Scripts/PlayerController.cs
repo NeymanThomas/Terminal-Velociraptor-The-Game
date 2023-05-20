@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         Player_Fall,
         Player_Landing,
         Player_Duck,
+        Player_Duck_Walk,
         Player_StandingScratch,
         Player_RunningScratch,
         Player_Death_1
@@ -121,23 +122,23 @@ public class PlayerController : MonoBehaviour
                 EffectAnimator.Instance.Land(isFacingRight);
             }
 
-            // check to see if the player is ducking. Adjust the collider hitbox as well
-            else if (isDucking) 
-            {
-                isScratching = false;
-                isScratchPressed = false;
-                speed = crouchingSpeed;
-                coll.radius = 0.25f;
-                coll.offset = new Vector2(0f, -0.25f);
-                ChangeAnimationState(AnimationState.Player_Duck);
-                CameraController.Instance.DuckCamera();
-            }
-
-            // Next see if the player is moving or not
+            // see if the player is moving or not
             else if (horizontal > 0f || horizontal < 0f) 
             {
+                // check to see if the player is ducking. Adjust the collider hitbox as well
+                if (isDucking) 
+                {
+                    isScratching = false;
+                    isScratchPressed = false;
+                    speed = crouchingSpeed;
+                    coll.radius = 0.25f;
+                    coll.offset = new Vector2(0f, -0.25f);
+                    ChangeAnimationState(AnimationState.Player_Duck_Walk);
+                    CameraController.Instance.DuckCamera();
+                }
+
                 // Did the player press the attack button?
-                if (isScratchPressed) 
+                else if (isScratchPressed) 
                 {
                     // check to see if the player is already in the process of the scratching animation.
                     // this is important because if the player goes from moving and stopping then the
@@ -158,8 +159,20 @@ public class PlayerController : MonoBehaviour
             // otherwise, the player is standing still
             else 
             {
+                // is the player ducking while not moving?
+                if (isDucking) 
+                {
+                    isScratching = false;
+                    isScratchPressed = false;
+                    speed = crouchingSpeed;
+                    coll.radius = 0.25f;
+                    coll.offset = new Vector2(0f, -0.25f);
+                    ChangeAnimationState(AnimationState.Player_Duck);
+                    CameraController.Instance.DuckCamera();
+                }
+
                 // is the player attacking while standing still?
-                if (isScratchPressed) 
+                else if (isScratchPressed) 
                 {
                     if (!isScratching) 
                     {

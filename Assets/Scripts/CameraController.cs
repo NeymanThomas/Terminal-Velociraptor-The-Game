@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform player;
+    [SerializeField] private float cameraYOffset;
     private bool isPlayerDucking;
     private float currentPlayerY;
 
@@ -36,16 +37,16 @@ public class CameraController : MonoBehaviour
             {
                 currentPlayerY -= 0.005f;
             }
-            transform.position = new Vector3(player.position.x, currentPlayerY + 1, transform.position.z);
+            transform.position = new Vector3(player.position.x, currentPlayerY + cameraYOffset, transform.position.z);
         }
         else if (!isPlayerDucking && currentPlayerY < player.position.y) 
         {
             currentPlayerY += 0.01f;
-            transform.position = new Vector3(player.position.x, currentPlayerY + 1, transform.position.z);
+            transform.position = new Vector3(player.position.x, currentPlayerY + cameraYOffset, transform.position.z);
         }
         else 
         {
-            transform.position = new Vector3(player.position.x, player.position.y + 1, transform.position.z);
+            transform.position = new Vector3(player.position.x, player.position.y + cameraYOffset, transform.position.z);
         }
     }
 
