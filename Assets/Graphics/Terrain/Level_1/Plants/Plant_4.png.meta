@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 5cee8ba67b37def47a0cfa17487b7fb5
+guid: 65fefad593f09004bb1d55c6a6920235
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -531818443197823106
-    second: GuitarPickCollect_0
+      213: -8212271653089534845
+    second: Plant_4_0
   - first:
-      213: -4166634153577194933
-    second: GuitarPickCollect_1
-  - first:
-      213: 8355544451405988182
-    second: GuitarPickCollect_2
+      213: 8156200722481016715
+    second: Plant_4_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GuitarPickCollect_0
+      name: Plant_4_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,14 +123,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e77413091f99e98f0800000000000000
-      internalID: -531818443197823106
+      spriteID: 38c96962176280e80800000000000000
+      internalID: -8212271653089534845
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GuitarPickCollect_1
+      name: Plant_4_1
       rect:
         serializedVersion: 2
         x: 16
@@ -147,29 +144,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4a550720542d26c0800000000000000
-      internalID: -4166634153577194933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GuitarPickCollect_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6514a03b86bd4f370800000000000000
-      internalID: 8355544451405988182
+      spriteID: b8fe34cf755a03170800000000000000
+      internalID: 8156200722481016715
       vertices: []
       indices: 
       edges: []
