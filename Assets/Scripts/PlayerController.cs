@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool isLanding;
     private bool isScratchPressed;
     private bool isScratching;
+    private bool isNotMoving;
     private bool isDead;
     private bool isFacingRight;
     private float jumpTimeCounter;
@@ -40,7 +41,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator anim;
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private CircleCollider2D coll;
+    [SerializeField] private CircleCollider2D circleColl;
+    [SerializeField] private BoxCollider2D boxColl;
     [SerializeField] private LayerMask jumpableGround;
 
 
@@ -104,9 +106,7 @@ public class PlayerController : MonoBehaviour
         // reset the camera if the player was previously ducking
         if (!isDucking && CameraController.Instance.IsPlayerDucking) 
         {
-            speed = originalSpeed;
-            coll.radius = 0.5f;
-            coll.offset = new Vector2(0f, 0f);
+            GrowHitbox();
             CameraController.Instance.RaiseCamera();
         }
 
@@ -130,9 +130,7 @@ public class PlayerController : MonoBehaviour
                 {
                     isScratching = false;
                     isScratchPressed = false;
-                    speed = crouchingSpeed;
-                    coll.radius = 0.25f;
-                    coll.offset = new Vector2(0f, -0.25f);
+                    ShrinkHitbox();
                     ChangeAnimationState(AnimationState.Player_Duck_Walk);
                     CameraController.Instance.DuckCamera();
                 }
@@ -164,9 +162,7 @@ public class PlayerController : MonoBehaviour
                 {
                     isScratching = false;
                     isScratchPressed = false;
-                    speed = crouchingSpeed;
-                    coll.radius = 0.25f;
-                    coll.offset = new Vector2(0f, -0.25f);
+                    ShrinkHitbox();
                     ChangeAnimationState(AnimationState.Player_Duck);
                     CameraController.Instance.DuckCamera();
                 }
@@ -220,7 +216,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // if the player is not on the ground and moving negatively, they're falling
-        if (!IsGrounded() && rb.velocity.y < -0.5f) 
+        if (!IsGrounded() && rb.velocity.y < -0.5f && !isScratching) 
         {
             ChangeAnimationState(AnimationState.Player_Fall);
             isLanding = true;
@@ -245,7 +241,29 @@ public class PlayerController : MonoBehaviour
     // simple check to see if the player is touching the ground layer or not
     private bool IsGrounded() 
     {
-        return Physics2D.BoxCast(coll.bounds.center, new Vector2(0.5f, 1f), 0f, Vector2.down, 0.1f, jumpableGround);
+        return Physics2D.BoxCast(circleColl.bounds.center, new Vector2(0.4f, 0.4f), 0f, Vector2.down, 0.4f, jumpableGround);
+    }
+
+
+    // when crouching, the speed and hitbox sizes need to be adjusted
+    private void ShrinkHitbox() 
+    {
+        speed = crouchingSpeed;
+        boxColl.size = new Vector2(0.1f, 0.1f);
+        boxColl.offset = new Vector2(0f, -0.1f);
+        circleColl.radius = 0.3f;
+        circleColl.offset = new Vector2(0f, -0.2f);
+    }
+
+
+    // after coming out of ducking, hitbox and speed need to be adjusted
+    private void GrowHitbox() 
+    {
+        speed = originalSpeed;
+        boxColl.size = new Vector2(1f, 0.5f);
+        boxColl.offset = new Vector2(0f, 0.1f);
+        circleColl.radius = 0.4f;
+        circleColl.offset = new Vector2(0f, -0.1f);
     }
 
 
