@@ -294,7 +294,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void RestartLevel() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
