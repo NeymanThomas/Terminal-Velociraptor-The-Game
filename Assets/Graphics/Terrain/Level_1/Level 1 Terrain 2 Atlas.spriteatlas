@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Level 1 Terrain 2 Atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -6969646747623891301, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -5751390464318446378, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 1327922221770119922, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -6208582990997808687, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 5951949447130285063, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -6817690224379749681, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -5463360090994195766, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 7981386751456598958, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -4881382166964781356, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -8481094113674947076, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -7307998599137054453, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 5502626342827482111, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 7517282690451489126, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 3968173487337187406, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 4194855580807707375, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -4854963319075997963, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -3307932609747504152, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -8742794438056582253, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -6386692987859413354, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 4293198891820847931, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 6240882754378971176, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -7255965015085190461, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -3882577667993090921, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -6153196734087252712, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 5026035838943938014, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -3394394384244889186, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 4520409191412726820, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -8579470035052856693, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -1483173673043869108, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 2801825591299847604, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 3559025947129792539, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 8334995929538680288, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 1128916170251131274, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -3281770663142156204, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 6459174875101061739, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 1502560450609190702, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -7702913104132983597, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -6285210284886875516, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -3368227764173234556, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -8223131324782556550, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -262943082304572883, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -5998005102576813758, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -5060748429682990380, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 2578203103379339837, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -8220941657204161562, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 5338839988339233133, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -319004533603200153, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -2440818592759340375, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -98264944750221105, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 8397969003155314420, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -3035178836182836266, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -1289379454871583343, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 5359609938863935843, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 762464716782017376, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 6690724007736738769, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -3024345577506093386, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 3510414387836292968, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -7096126171005056441, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -1776618734959195184, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 5036011023499679272, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -412674587522059725, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 3591912167889018488, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: 6344388037988401192, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  - {fileID: -7860467873802504771, guid: e97e651cfd3568e438b21fdb1d22b52f, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Level_1_Terrain_2_38
+  - Level_1_Terrain_2_39
+  - Level_1_Terrain_2_63
+  - Level_1_Terrain_2_62
+  - Level_1_Terrain_2_58
+  - Level_1_Terrain_2_29
+  - Level_1_Terrain_2_61
+  - Level_1_Terrain_2_59
+  - Level_1_Terrain_2_28
+  - Level_1_Terrain_2_60
+  - Level_1_Terrain_2_30
+  - Level_1_Terrain_2_31
+  - Level_1_Terrain_2_49
+  - Level_1_Terrain_2_32
+  - Level_1_Terrain_2_52
+  - Level_1_Terrain_2_48
+  - Level_1_Terrain_2_33
+  - Level_1_Terrain_2_23
+  - Level_1_Terrain_2_53
+  - Level_1_Terrain_2_34
+  - Level_1_Terrain_2_22
+  - Level_1_Terrain_2_50
+  - Level_1_Terrain_2_35
+  - Level_1_Terrain_2_21
+  - Level_1_Terrain_2_51
+  - Level_1_Terrain_2_45
+  - Level_1_Terrain_2_36
+  - Level_1_Terrain_2_20
+  - Level_1_Terrain_2_56
+  - Level_1_Terrain_2_44
+  - Level_1_Terrain_2_37
+  - Level_1_Terrain_2_27
+  - Level_1_Terrain_2_57
+  - Level_1_Terrain_2_47
+  - Level_1_Terrain_2_26
+  - Level_1_Terrain_2_54
+  - Level_1_Terrain_2_46
+  - Level_1_Terrain_2_25
+  - Level_1_Terrain_2_55
+  - Level_1_Terrain_2_41
+  - Level_1_Terrain_2_24
+  - Level_1_Terrain_2_40
+  - Level_1_Terrain_2_43
+  - Level_1_Terrain_2_42
+  - Level_1_Terrain_2_9
+  - Level_1_Terrain_2_8
+  - Level_1_Terrain_2_3
+  - Level_1_Terrain_2_2
+  - Level_1_Terrain_2_1
+  - Level_1_Terrain_2_0
+  - Level_1_Terrain_2_7
+  - Level_1_Terrain_2_6
+  - Level_1_Terrain_2_5
+  - Level_1_Terrain_2_4
+  - Level_1_Terrain_2_18
+  - Level_1_Terrain_2_19
+  - Level_1_Terrain_2_16
+  - Level_1_Terrain_2_17
+  - Level_1_Terrain_2_14
+  - Level_1_Terrain_2_15
+  - Level_1_Terrain_2_12
+  - Level_1_Terrain_2_13
+  - Level_1_Terrain_2_10
+  - Level_1_Terrain_2_11
+  m_RenderDataMap: {}
+  m_Tag: Level 1 Terrain 2 Atlas
+  m_IsVariant: 0

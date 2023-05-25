@@ -1,22 +1,31 @@
 fileFormatVersion: 2
-guid: 6f904dcb2ad04d34c85306b9d1e2d660
+guid: b5ce168513a108c419a8429ca56a960a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8484266989187560556
-    second: PlayerDeath1_0
+      213: 1662282723137819913
+    second: SharkTankIdle_0
   - first:
-      213: 6343313186615144536
-    second: PlayerDeath1_1
+      213: -7866037151970624082
+    second: SharkTankIdle_1
   - first:
-      213: -8114656239897892810
-    second: PlayerDeath1_2
+      213: 3472840060132314683
+    second: SharkTankIdle_2
   - first:
-      213: -3099947051941294144
-    second: PlayerDeath1_3
+      213: 1613479647234875491
+    second: SharkTankIdle_3
   - first:
-      213: -1354375102656757050
-    second: PlayerDeath1_4
+      213: 4036480720548689873
+    second: SharkTankIdle_4
+  - first:
+      213: -659632661459587281
+    second: SharkTankIdle_5
+  - first:
+      213: 2431755758959469066
+    second: SharkTankIdle_6
+  - first:
+      213: 3460977995021748271
+    second: SharkTankIdle_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +127,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerDeath1_0
+      name: SharkTankIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90516ec545d911710800000000000000
+      internalID: 1662282723137819913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SharkTankIdle_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eadf3c6e2e836d290800000000000000
+      internalID: -7866037151970624082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SharkTankIdle_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ecee182a1023030800000000000000
+      internalID: 3472840060132314683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SharkTankIdle_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360e1c9c03b346610800000000000000
+      internalID: 1613479647234875491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SharkTankIdle_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c64f81600eb2eb570800000000000000
-      internalID: 8484266989187560556
+      spriteID: 1d7740344d5740830800000000000000
+      internalID: 4036480720548689873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerDeath1_1
+      name: SharkTankIdle_5
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +246,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8503f332cb9f70850800000000000000
-      internalID: 6343313186615144536
+      spriteID: f2fa47bd69388d6f0800000000000000
+      internalID: -659632661459587281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerDeath1_2
+      name: SharkTankIdle_6
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 638aa72a423f26f80800000000000000
-      internalID: -8114656239897892810
+      spriteID: a022a419af45fb120800000000000000
+      internalID: 2431755758959469066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerDeath1_3
+      name: SharkTankIdle_7
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,29 +288,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0cf058a9496caf4d0800000000000000
-      internalID: -3099947051941294144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerDeath1_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c2c289150b443de0800000000000000
-      internalID: -1354375102656757050
+      spriteID: f2807b0462dd70030800000000000000
+      internalID: 3460977995021748271
       vertices: []
       indices: 
       edges: []

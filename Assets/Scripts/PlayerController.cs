@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float jumpingPower;
     [SerializeField] private float crouchingSpeed;
+    [SerializeField] private float attackRange;
+    [SerializeField] private int attackDamage;
 
     // states for animator
     private enum AnimationState 
@@ -35,7 +37,8 @@ public class PlayerController : MonoBehaviour
         Player_Duck_Walk,
         Player_StandingScratch,
         Player_RunningScratch,
-        Player_Death_1
+        Player_Death_1,
+        Player_Death_2
     }
 
     [SerializeField] private Rigidbody2D rb;
@@ -43,11 +46,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private CircleCollider2D circleColl;
     [SerializeField] private BoxCollider2D boxColl;
+    [SerializeField] private CircleCollider2D itemCollider;
+    [SerializeField] private Transform attackPoint;
     [SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private LayerMask enemyLayer;
 
 
     void Start() 
     {
+        isFacingRight = true;
         currentState = AnimationState.Player_Idle;
         originalSpeed = speed;
     }
@@ -76,7 +83,7 @@ public class PlayerController : MonoBehaviour
         {
             isDucking = true;
         }
-        else 
+        else if (!IsUnderCeiling())
         {
             isDucking = false;
         }
@@ -92,19 +99,13 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
         // simply flip the sprite depending on horizontal movement
-        if (horizontal > 0f) 
+        if ((horizontal > 0f && !isFacingRight) || (horizontal < 0f && isFacingRight)) 
         {
-            sr.flipX = false;
-            isFacingRight = true;
-        }
-        else if (horizontal < 0f)
-        {
-            sr.flipX = true;
-            isFacingRight = false;
+            FlipPlayer();
         }
 
         // reset the camera if the player was previously ducking
-        if (!isDucking && CameraController.Instance.IsPlayerDucking) 
+        if (!isDucking && !IsUnderCeiling() && CameraController.Instance.IsPlayerDucking) 
         {
             GrowHitbox();
             CameraController.Instance.RaiseCamera();
@@ -145,6 +146,7 @@ public class PlayerController : MonoBehaviour
                     {
                         isScratching = true;
                         ChangeAnimationState(AnimationState.Player_RunningScratch);
+                        Scratch();
                     }
                 }
                 // otherwise, just run
@@ -174,6 +176,7 @@ public class PlayerController : MonoBehaviour
                     {
                         isScratching = true;
                         ChangeAnimationState(AnimationState.Player_StandingScratch);
+                        Scratch();
                     }
                 }
                 // otherwise, the player is standing idly
@@ -244,6 +247,18 @@ public class PlayerController : MonoBehaviour
         return Physics2D.BoxCast(circleColl.bounds.center, new Vector2(0.4f, 0.4f), 0f, Vector2.down, 0.4f, jumpableGround);
     }
 
+    // simple check to see if the player is underneath something too low
+    private bool IsUnderCeiling() 
+    {
+        return Physics2D.BoxCast(circleColl.bounds.center, new Vector2(0.4f, 0.4f), 0f, Vector2.up, 0.4f, jumpableGround);
+    }
+
+
+    private void FlipPlayer() 
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
+    }
 
     // when crouching, the speed and hitbox sizes need to be adjusted
     private void ShrinkHitbox() 
@@ -253,6 +268,8 @@ public class PlayerController : MonoBehaviour
         boxColl.offset = new Vector2(0f, -0.1f);
         circleColl.radius = 0.3f;
         circleColl.offset = new Vector2(0f, -0.2f);
+        itemCollider.radius = 0.3f;
+        itemCollider.offset = new Vector2(0f, -0.2f);
     }
 
 
@@ -260,10 +277,12 @@ public class PlayerController : MonoBehaviour
     private void GrowHitbox() 
     {
         speed = originalSpeed;
-        boxColl.size = new Vector2(1f, 0.5f);
+        boxColl.size = new Vector2(0.85f, 0.5f);
         boxColl.offset = new Vector2(0f, 0.1f);
         circleColl.radius = 0.4f;
         circleColl.offset = new Vector2(0f, -0.1f);
+        itemCollider.radius = 0.4f;
+        itemCollider.offset = new Vector2(0f, 0f);
     }
 
 
@@ -283,6 +302,25 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    private void Scratch() 
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayer);
+
+        foreach(Collider2D enemy in hitEnemies) 
+        {
+            enemy.GetComponent<EnemyDamageTaker>().TakeDamage(attackDamage);
+        }
+    }
+
+
+    // simple helper function to draw attack range in editor
+    private void OnDrawGizmosSelected() 
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
     // For detecting when running into objects with collision detection
     private void OnCollisionEnter2D(Collision2D collision) 
     {
@@ -291,6 +329,16 @@ public class PlayerController : MonoBehaviour
             isDead = true;
             ChangeAnimationState(AnimationState.Player_Death_1);
             rb.bodyType = RigidbodyType2D.Static;
+        }
+    }
+
+    // For detecting when running into various triggers
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (collision.gameObject.CompareTag("DeepWater")) 
+        {
+            isDead = true;
+            ChangeAnimationState(AnimationState.Player_Death_2);
         }
     }
 
